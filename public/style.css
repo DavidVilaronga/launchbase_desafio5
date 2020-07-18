@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+:root {
+    --color-grenn:#62e756;
+}
+
+*{
+    margin: 0;
+    page-break-inside: 0;
+    border: 0;
+}
+body {
+    background: rgb(211, 211, 211);
+    font-family: 'Roboto', sans-serif;
+}
+header {
+    background: var(--color-grenn);
+    width: 100%;
+    padding: 32px;
+    text-align: center;
+    border-bottom: 2px solid black;
+    box-sizing: border-box;
+    
+}
+header div {
+    font-size: 18px;
+}
+
+header div a {
+    color: black;
+    text-decoration: none;
+    position: relative;
+}
+
+header div a + a {
+    margin-left: 32px;
+}
+
+header div a.active {
+    font-weight: bold;
+}
+
+header div a::after {
+    content: "";
+    width: 35%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+}
+
+header div a:hover::after {
+    width: 100%;
+    transition: width 200ms ease-in-out;
+}
+
+/* card */
+
+.card {
+    background-color: white;
+    width: 800px;
+    min-height: 400px;
+    margin: 45px auto;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    box-shadow: 0px 5px 6px -2px rgba(0, 0, 0, 0.2);
+    animation: up 200ms ease;
+}
+
+@keyframes up {
+    from{
+        opacity: 0;
+        transform: translateY(15px)
+    }
+    to{
+        opacity: 100%;
+    }
+}
+
+/* details */
+
+.details {
+    padding: 32px;
+}
+
+.details .item {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 16px 0;
+}
+
+.details .item:first-child {
+    border: none;
+}
+
+.details h3,
+.details .item div:nth-child(1) {
+    font-size: 14px;
+    line-height: 24px;
+    color: rgb(20, 20, 20);
+    letter-spacing: 0.7px;
+    font-weight: normal;
+}
+
+.details .item div:nth-child(2) {
+    color: #555;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.details h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--color-grenn);
+}
+
+.details .item span {
+    padding: 8px 16px;
+    background-color: var(--color-grenn);
+    border-radius: 16px;
+    color: black;
+    margin-right: 4px;
+    margin-top: 8px;
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+/* form */
+
+input, select {
+    width: 100%;
+    outline: none;
+    color: #555555;
+    font-size: 18px;
+}
+
+input[type="radio"] {
+    width: initial;
+    margin-right: 4px;
+}
+
+input::placeholder {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+button[type="submit"],
+a.button {
+    padding: 8px 32px;
+    background-color: var(--color-grenn);
+    color: white;
+    border-radius: 4px;
+    margin-top: 24px;
+    width: 100%;
+    font-size: 16px;
+}
+
+a.button {
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+}
+
+#form-delete button[type="submit"] {
+    margin-top: 8px;
+    background-color: rgb(255, 71, 71);
+}
+
+/* index table */
+
+.table-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 45px 1fr;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.table-container table{
+    border-spacing: 0;
+}
+
+.table-container thead tr th{
+    text-align: center;
+}
+
+td, th {
+    padding: 16px;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+tbody tr:last-child td{
+    border-bottom: none;
+}
+
+tbody tr td:first-child{
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    align-items: center;
+}
+
+tbody tr td:first-child span{
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 0px 0px 8px 2px var(--color-grenn);
+    border: 2px solid white;
+}
+
+tbody tr td {
+    text-align: center;
+}
+
+tbody tr td:last-child a,
+.table-container > a {
+    background-color: var(--color-grenn);
+    padding: 8px 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.table-container > a {
+    width: 32px;
+    margin-bottom: 16px;
+    margin-left: 8px;
+}
+
+.occupation_table {
+    color: var(--color-grenn);
+    font-weight: bold;
+    text-transform: uppercase;
+}
