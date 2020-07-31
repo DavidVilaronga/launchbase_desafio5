@@ -2,6 +2,8 @@
 
 :root {
     --color-grenn:#62e756;
+    --color-blue: darkcyan;
+    --color-sea: darkseagreen;
 }
 
 *{
@@ -10,11 +12,11 @@
     border: 0;
 }
 body {
-    background: rgb(211, 211, 211);
+    background: var(--color-sea);
     font-family: 'Roboto', sans-serif;
 }
 header {
-    background: var(--color-grenn);
+    background: var(--color-blue);
     width: 100%;
     padding: 32px;
     text-align: center;
@@ -23,11 +25,11 @@ header {
     
 }
 header div {
-    font-size: 18px;
+    font-size: 28px;
 }
 
 header div a {
-    color: black;
+    color: var(--color-sea);
     text-decoration: none;
     position: relative;
 }
@@ -44,7 +46,7 @@ header div a::after {
     content: "";
     width: 35%;
     height: 2px;
-    background-color: black;
+    background-color: var(--color-sea);
     position: absolute;
     left: 0;
     bottom: -4px;
@@ -58,7 +60,7 @@ header div a:hover::after {
 /* card */
 
 .card {
-    background-color: white;
+    background-color: lightcyan;
     width: 800px;
     min-height: 400px;
     margin: 45px auto;
@@ -111,12 +113,12 @@ header div a:hover::after {
 .details h3 {
     text-transform: uppercase;
     font-weight: bold;
-    color: var(--color-grenn);
+    color: var(--color-blue);
 }
 
 .details .item span {
     padding: 8px 16px;
-    background-color: var(--color-grenn);
+    background-color: var(--color-blue);
     border-radius: 16px;
     color: black;
     margin-right: 4px;
@@ -149,7 +151,7 @@ input::placeholder {
 button[type="submit"],
 a.button {
     padding: 8px 32px;
-    background-color: var(--color-grenn);
+    background-color: var(--color-blue);
     color: white;
     border-radius: 4px;
     margin-top: 24px;
@@ -209,7 +211,7 @@ tbody tr td:first-child span{
     background-position: center;
     background-size: cover;
     border-radius: 50%;
-    box-shadow: 0px 0px 8px 2px var(--color-grenn);
+    box-shadow: 0px 0px 8px 2px var(--color-blue);
     border: 2px solid white;
 }
 
@@ -219,7 +221,7 @@ tbody tr td {
 
 tbody tr td:last-child a,
 .table-container > a {
-    background-color: var(--color-grenn);
+    background-color: var(--color-blue);
     padding: 8px 16px;
     text-decoration: none;
     text-transform: uppercase;
@@ -235,7 +237,7 @@ tbody tr td:last-child a,
 }
 
 .occupation_table {
-    color: var(--color-grenn);
+    color: var(--color-blue);
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -268,6 +270,7 @@ tbody tr td:last-child a,
 }
 
 .table-container .header form button {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
 }
 
@@ -291,11 +294,11 @@ tbody tr td:last-child a,
 
 .pagination a,
 .pagination span {
-    color: var(--color-grenn);
+    color: var(--color-blue);
     text-decoration: none;
     margin-right: 16px;
 }
 
 .pagination a:hover {
-    filter: brightness(0.8);
+    filter: brightness(0.3);
 }
