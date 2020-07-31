@@ -155,6 +155,7 @@ a.button {
     margin-top: 24px;
     width: 100%;
     font-size: 16px;
+    cursor: pointer;
 }
 
 a.button {
@@ -268,4 +269,33 @@ tbody tr td:last-child a,
 
 .table-container .header form button {
     margin: 0;
+}
+
+/*pagination*/
+
+.table-container {
+    display: grid;
+    grid-template: 64px 1fr 16px;
+}
+
+.table-container .header {
+    margin: 0;
+    align-self: start;
+}
+
+.table-container .pagination {
+    margin: 0;
+    align-self: end;
+    justify-self: center;
+}
+
+.pagination a,
+.pagination span {
+    color: var(--color-grenn);
+    text-decoration: none;
+    margin-right: 16px;
+}
+
+.pagination a:hover {
+    filter: brightness(0.8);
 }
